@@ -669,6 +669,26 @@ const projects: ProjectProps[] = [
             "User-Friendly Browsing: Quickly find events with all key info at a glance",
         ],
     },
+    {
+        name: "Lead-to-CRM-to-Invoice Automation (RD Station ↔ Vhsys)",
+        type: "professional",
+        technologies: ["TypeScript", "Express.js", "RD Station API", "Vhsys API", "Webhooks"],
+        platforms: ["Backend Service"],
+        descriptionLines: [
+            "Automates the entire path from website budget request → CRM deal → invoicing system, eliminating double data entry.",
+            "API receives the site form, upserts the contact in RD Station, creates a sales funnel's deal with the chosen products, and tracks its progress.",
+            "When the deal reaches the final stage (via webhook), the service creates the customer in Vhsys and hands off billing/financial workflows.",
+        ],
+        highlights: [
+            "Form Intake: Validates and normalizes website submissions; associates product line items with the prospect",
+            "RD Station Sync: Upserts contact, opens a deal in the selected funnel, and attaches products/notes to the opportunity",
+            "Stage Webhook: Listens for deal moved to the final stage; verifies signature, fetches contact, and triggers downstream actions",
+            "Vhsys Handoff: Creates/updates the customer record in Vhsys to start invoicing and financial processes",
+            "Idempotency & Retries: Request keys and replay-safe processing prevent duplicates across API and webhook flows",
+            "Product Mapping: Catalog mapping ensures product codes/descriptions stay consistent between website, RD Station, and Vhsys",
+            "Security & Compliance: Scoped API tokens, secret management, and data minimization aligned with LGPD best practices",
+        ],
+    },
 ]
 
 export const Projects: React.FC<ProjectsProps> = (_) => {
