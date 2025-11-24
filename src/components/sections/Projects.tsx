@@ -689,6 +689,31 @@ const projects: ProjectProps[] = [
             "Security & Compliance: Scoped API tokens, secret management, and data minimization aligned with LGPD best practices",
         ],
     },
+    {
+        name: "Planika (Collaborative Trip Planner)",
+        type: "personal",
+        technologies: ["TypeScript", "React.js", "Express.js", "MySQL", "Hocuspocus.js"],
+        platforms: ["Web"],
+        descriptionLines: [
+            "Planning group trips required juggling spreadsheets, messaging apps, and scattered notes, making it difficult to track expenses, assign responsibilities, and maintain a clear budget overview across multiple travelers.",
+            "Developed a real-time collaborative trip planning platform featuring hierarchical budget organization, dynamic filtering, and simultaneous editing that enables travel groups to plan, track, and manage trip expenses together seamlessly.",
+            "Travel groups invite companions via email, organize expenses in an interactive tree structure, filter by location/traveler/date/status, track who's booking what, and monitor costs in real-time as everyone collaborates on the trip budget.",
+        ],
+        highlights: [
+            "Interactive Tree Structure: Hierarchical budget organization showing total costs for each expense branch",
+            "Dynamic Filtering: Click any location, traveler, date, or reservation status to interactively filter the entire trip view",
+            "Real-Time Collaboration: Invite travel companions by email and see instant updates as everyone adds expenses and comments simultaneously",
+            "Timeline Planning: Schedule expenses across trip dates, identify high-spend days, and track itinerary costs chronologically",
+            "Status Tracking: Mark items as pending, reserved, or paid; assign booking responsibilities to clarify who handles what",
+            "Location-Based Organization: Group expenses by destination and track spending patterns across trip locations",
+            "Reports Generation: Generate detailed expense reports by location and export in popular formats or email",
+            "Collaborative Updates: Hocuspocus.js-powered live synchronization for seamless multi-user editing",
+            "Google Authentication: Secure sign-in and user management for travel group coordination",
+            "Visual Cost Breakdown: Interactive expense visualization showing daily, weekly, and location-based spending",
+            "Responsibility Assignment: Clear accountability with named booking assignments per expense item",
+            "Expense Categories: Organize costs hierarchically (flights, accommodations, activities, meals, transportation)",
+        ],
+    },
 ]
 
 export const Projects: React.FC<ProjectsProps> = (_) => {
